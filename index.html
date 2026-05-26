@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohan Kumar - Frontend Developer Portfolio. Building elegant, high-performance web experiences with Python, C, C++, and modern web technologies.">
+    <meta name="keywords" content="Mohan Kumar, Frontend Developer, Web Developer, Python, C++, Portfolio">
+    <meta name="author" content="Mohan Kumar">
+    <meta name="theme-color" content="#0a0e1a">
+    <title>Mohan Kumar | Frontend Developer & Problem Solver</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Mobile Top Header Bar -->
+    <header class="mobile-header">
+        <div class="mobile-header-container">
+            <a href="#home" class="mobile-logo">
+                <img src="mk_logo.png" alt="MK Logo">
+                <span>Mohan Kumar</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Drawer Backdrop Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="portfolio-container">
+        <!-- Sticky Left Sidebar Pane -->
+        <aside class="sidebar-pane" id="sidebarPane">
+            <div class="sidebar-scroll">
+                <!-- Profile Section -->
+                <div class="profile-card">
+                    <div class="profile-img-wrap">
+                        <img src="Mohan.jpg" alt="Mohan Kumar" class="profile-image">
+                        <div class="glow-ring"></div>
+                    </div>
+                    <h1 class="profile-name">Mohan Kumar</h1>
+                    <p class="profile-handle">@mohan-kumar</p>
+                    <div class="profile-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>India</span>
+                    </div>
+                    <p class="profile-title">Frontend Developer & Problem Solver</p>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-badge">
+                            <span class="stat-count">10+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-count">5+</span>
+                            <span class="stat-label">Languages</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation List -->
+                <nav class="sidebar-nav">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="#home" class="nav-link active" data-section="0">
+                                <span class="nav-num">01</span>
+                                <span class="nav-text">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="nav-link" data-section="1">
+                                <span class="nav-num">02</span>
+                                <span class="nav-text">About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#skills" class="nav-link" data-section="2">
+                                <span class="nav-num">03</span>
+                                <span class="nav-text">Skills</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="nav-link" data-section="3">
+                                <span class="nav-num">04</span>
+                                <span class="nav-text">Projects</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#resume" class="nav-link" data-section="4">
+                                <span class="nav-num">05</span>
+                                <span class="nav-text">Resume</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav-link" data-section="5">
+                                <span class="nav-num">06</span>
+                                <span class="nav-text">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Sidebar Footer Actions -->
+                <div class="sidebar-footer">
+                    <a href="mailto:mohanjayakumar2006@gmail.com" class="btn btn-sidebar-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Email Me
+                    </a>
+                    
+                    <div class="social-icons">
+                        <a href="https://github.com/Mohan-kumar-12" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.477 2 12C2 16.418 4.865 20.167 8.839 21.489C9.339 21.581 9.521 21.272 9.521 21.007C9.521 20.769 9.513 20.14 9.508 19.307C6.726 19.91 6.139 17.967 6.139 17.967C5.685 16.812 5.029 16.504 5.029 16.504C4.121 15.881 5.098 15.894 5.098 15.894C6.101 15.964 6.629 16.926 6.629 16.926C7.521 18.455 8.97 17.999 9.539 17.742C9.631 17.1 9.889 16.645 10.175 16.42C7.955 16.19 5.62 15.331 5.62 11.492C5.62 10.393 6.01 9.494 6.649 8.794C6.546 8.565 6.203 7.541 6.747 6.152C6.747 6.152 7.587 5.908 9.497 7.208C10.31 6.907 11.16 6.823 12.001 6.819C12.841 6.823 13.691 6.907 14.505 7.208C16.413 5.908 17.251 6.152 17.251 6.152C17.797 7.541 17.453 8.565 17.351 8.794C17.991 9.494 18.378 10.393 18.378 11.492C18.378 15.341 16.04 16.187 13.813 16.41C14.172 16.694 14.491 17.255 14.491 18.113C14.491 19.342 14.479 20.338 14.479 21.007C14.479 21.275 14.659 21.586 15.167 21.488C19.138 20.164 22 16.416 22 12C22 6.477 17.523 2 12 2Z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohan-kumar-j-b62138382/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"/><path d="M6 9H2V21H6V9Z"/><path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Content Pane (Scrollable) -->
+        <main class="content-pane scroll-container" id="scrollContainer">
+            <!-- Hero Section -->
+            <section id="home" class="panel hero">
+                <div class="hero-content">
+                    <span class="section-label">01 // Welcome</span>
+                    <h2 class="hero-title">
+                        Crafting digital experiences with <span class="gradient-text">precision</span> and <span class="gradient-text">purpose</span>
+                    </h2>
+                    <p class="hero-tagline">Mohan Kumar &mdash; Frontend Developer</p>
+                    <p class="hero-description">
+                        I build responsive, high-performance web applications using clean code and modern design systems. Translating complex software and design problems into simple, beautiful digital solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary nav-btn" data-section="3">
+                            View Projects
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="#about" class="btn btn-secondary nav-btn" data-section="1">
+                            More About Me
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="panel about">
+                <div class="container">
+                    <span class="section-label">02 // Profile</span>
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3 class="about-heading">Frontend Developer & Problem Solver</h3>
+                            <p class="about-bio">
+                                I am a dedicated frontend developer with a strong foundation in programming languages and
+                                web technologies. My journey in software development has equipped me with diverse technical
+                                skills, ranging from low-level systems programming in C and C++ to modern web development with HTML
+                                and Python.
+                            </p>
+                            <p class="about-bio">
+                                With a keen eye for detail and a passion for creating intuitive, interactive user interfaces, I strive to
+                                build web applications that not only look great but also provide exceptional user
+                                experiences. I'm constantly learning and adapting to new technologies to stay at the
+                                forefront of web development.
+                            </p>
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">5+</span>
+                                    <span class="stat-label">Languages</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">10+</span>
+                                    <span class="stat-label">Projects</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-label">Dedication</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="panel skills">
+                <div class="container">
+                    <span class="section-label">03 // Technical Stack</span>
+                    <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                    <p class="section-subtitle">Technologies and languages I work with</p>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 12L12 17L22 12" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="skill-name">Python</h3>
+                            <p class="skill-description">Versatile programming for backend scripts, servers, and data management.</p>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14 2V8H20" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="skill-name">C</h3>
+                            <p class="skill-description">Systems programming, memory management, and low-level computations.</p>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 12L12 17L22 12" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="skill-name">C++</h3>
+                            <p class="skill-description">Object-oriented programming, data structures, and performant algorithms.</p>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z" stroke="#ef4444" stroke-width="2"/>
+                                    <path d="M7 7H17M7 12H17M7 17H13" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="skill-name">HTML & CSS</h3>
+                            <p class="skill-description">Semantic tags structure, responsive grids, Flexbox, and advanced animation.</p>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69752 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69752 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.27002 6.96L12 12.01L20.73 6.96" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 22.08V12" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="skill-name">Frontend Development</h3>
+                            <p class="skill-description">Building responsive, accessible, interactive web applications and interfaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="panel projects">
+                <div class="container">
+                    <span class="section-label">04 // Selected Works</span>
+                    <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+                    <p class="section-subtitle">Real-world applications built with care and focus</p>
+
+                    <div class="projects-grid">
+                        <!-- Project 1 -->
+                        <div class="project-card" id="project-grocery">
+                            <div class="project-card-inner">
+                                <div class="project-header">
+                                    <div class="project-icon-wrap" style="--p-color: #10b981">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                            <path d="M16 10a4 4 0 01-8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="project-meta">
+                                        <span class="project-badge team-badge">👥 Team Project</span>
+                                        <span class="project-number">01</span>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">Grocery Shopping System</h3>
+                                <ul class="project-points">
+                                    <li>Developed an online grocery shopping platform enabling users to browse products, add items to cart, and place orders.</li>
+                                    <li>Implemented responsive UI pages and backend database handling for shopping and orders.</li>
+                                </ul>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                </div>
+                            </div>
+                            <div class="project-glow" style="--p-color: #10b981"></div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-card" id="project-medical">
+                            <div class="project-card-inner">
+                                <div class="project-header">
+                                    <div class="project-icon-wrap" style="--p-color: #06b6d4">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="project-meta">
+                                        <span class="project-badge team-badge">👥 Team Project</span>
+                                        <span class="project-number">02</span>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">Medical Care System</h3>
+                                <ul class="project-points">
+                                    <li>Designed a system to manage patient records and appointment scheduling.</li>
+                                    <li>Enabled efficient storage, searching, and retrieval of client and medical logs.</li>
+                                </ul>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">DBMS</span>
+                                </div>
+                            </div>
+                            <div class="project-glow" style="--p-color: #06b6d4"></div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-card" id="project-ai-coach">
+                            <div class="project-card-inner">
+                                <div class="project-header">
+                                    <div class="project-icon-wrap" style="--p-color: #8b5cf6">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2a3 3 0 013 3v7a3 3 0 01-6 0V5a3 3 0 013-3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 10v2a7 7 0 01-14 0v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 19v3M8 22h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="project-meta">
+                                        <span class="project-badge team-badge">👥 Team Project</span>
+                                        <span class="project-number">03</span>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">AI Presentation Coach</h3>
+                                <ul class="project-points">
+                                    <li>Built an AI-based tool to analyze speech rhythms and provide feedback for improving presentation skills.</li>
+                                    <li>Integrated voice metrics and basic analytical models to score delivery style and timing.</li>
+                                </ul>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Machine Learning</span>
+                                </div>
+                            </div>
+                            <div class="project-glow" style="--p-color: #8b5cf6"></div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="project-card" id="project-student">
+                            <div class="project-card-inner">
+                                <div class="project-header">
+                                    <div class="project-icon-wrap" style="--p-color: #f59e0b">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="project-meta">
+                                        <span class="project-badge team-badge">👥 Team Project</span>
+                                        <span class="project-number">04</span>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">Student Companion Pro</h3>
+                                <ul class="project-points">
+                                    <li>Developed an AI-powered learning assistant for academic tasks.</li>
+                                    <li>Enabled document uploading, automatic summarization, and interactive study MCQ generation.</li>
+                                </ul>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">NLP</span>
+                                    <span class="tech-tag">Machine Learning</span>
+                                </div>
+                            </div>
+                            <div class="project-glow" style="--p-color: #f59e0b"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resume Section -->
+            <section id="resume" class="panel resume">
+                <div class="container">
+                    <span class="section-label">05 // Work & Background</span>
+                    <h2 class="section-title">My <span class="gradient-text">Resume</span></h2>
+                    <div class="resume-wrapper">
+                        <div class="resume-card">
+                            <div class="resume-content">
+                                <div class="resume-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10 9H9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="resume-text">
+                                    <h3>Mohan Kumar &mdash; Resume</h3>
+                                    <p>Frontend Developer &middot; Python &middot; C &middot; C++</p>
+                                    <div class="resume-badges">
+                                        <span class="badge badge-purple">🎓 Computer Science</span>
+                                        <span class="badge badge-pink">💻 Frontend Dev</span>
+                                        <span class="badge badge-cyan">📄 PDF · 2026</span>
+                                    </div>
+                                </div>
+                                <div class="resume-actions">
+                                    <a href="Mohan_Kumar_Resume.pdf" download class="btn btn-download">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="download-icon">
+                                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Download PDF
+                                    </a>
+                                    <a href="Mohan_Kumar_Resume.pdf" target="_blank" class="btn btn-view">
+                                        View Online ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Highlight Cards -->
+                        <div class="resume-highlights">
+                            <div class="highlight-card">
+                                <span class="highlight-emoji">🎓</span>
+                                <div class="highlight-label">Education</div>
+                                <div class="highlight-desc">Computer Science engineering background, with focus on logic and system analysis.</div>
+                            </div>
+                            <div class="highlight-card">
+                                <span class="highlight-emoji">🚀</span>
+                                <div class="highlight-label">Projects</div>
+                                <div class="highlight-desc">10+ hands-on projects spanning system architecture, databases, web development, and scripts.</div>
+                            </div>
+                            <div class="highlight-card">
+                                <span class="highlight-emoji">🛠️</span>
+                                <div class="highlight-label">Skills</div>
+                                <div class="highlight-desc">Python, C, C++, HTML/CSS &mdash; full-spectrum knowledge from systems to UI layers.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="panel contact">
+                <div class="container">
+                    <span class="section-label">06 // Connect</span>
+                    <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                    <p class="section-subtitle">Have a project or opportunity? Let's connect and build something awesome.</p>
+                    <div class="contact-grid">
+                        <div class="contact-card" id="contact-email">
+                            <div class="contact-icon email-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Email</h3>
+                            <a href="mailto:mohanjayakumar2006@gmail.com" class="contact-link">mohanjayakumar2006@gmail.com</a>
+                        </div>
+
+                        <div class="contact-card" id="contact-phone">
+                            <div class="contact-icon phone-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.5953 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5864 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Phone</h3>
+                            <a href="tel:+918124132744" class="contact-link">+91 8124132744</a>
+                        </div>
+
+                        <a href="https://github.com/Mohan-kumar-12" target="_blank" rel="noopener noreferrer" class="contact-card contact-card-link" id="contact-github">
+                            <div class="contact-icon github-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.477 2 2 6.477 2 12C2 16.418 4.865 20.167 8.839 21.489C9.339 21.581 9.521 21.272 9.521 21.007C9.521 20.769 9.513 20.14 9.508 19.307C6.726 19.91 6.139 17.967 6.139 17.967C5.685 16.812 5.029 16.504 5.029 16.504C4.121 15.881 5.098 15.894 5.098 15.894C6.101 15.964 6.629 16.926 6.629 16.926C7.521 18.455 8.97 17.999 9.539 17.742C9.631 17.1 9.889 16.645 10.175 16.42C7.955 16.19 5.62 15.331 5.62 11.492C5.62 10.393 6.01 9.494 6.649 8.794C6.546 8.565 6.203 7.541 6.747 6.152C6.747 6.152 7.587 5.908 9.497 7.208C10.31 6.907 11.16 6.823 12.001 6.819C12.841 6.823 13.691 6.907 14.505 7.208C16.413 5.908 17.251 6.152 17.251 6.152C17.797 7.541 17.453 8.565 17.351 8.794C17.991 9.494 18.378 10.393 18.378 11.492C18.378 15.341 16.04 16.187 13.813 16.41C14.172 16.694 14.491 17.255 14.491 18.113C14.491 19.342 14.479 20.338 14.479 21.007C14.479 21.275 14.659 21.586 15.167 21.488C19.138 20.164 22 16.416 22 12C22 6.477 17.523 2 12 2Z" stroke="currentColor" stroke-width="1.5" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <h3>GitHub</h3>
+                            <span class="contact-link">Mohan-kumar-12 ↗</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/mohan-kumar-j-b62138382/" target="_blank" rel="noopener noreferrer" class="contact-card contact-card-link" id="contact-linkedin">
+                            <div class="contact-icon linkedin-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6 9H2V21H6V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>LinkedIn</h3>
+                            <span class="contact-link">Mohan Kumar J ↗</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="bg3d-canvas" aria-hidden="true"></canvas>
+
+    <!-- Background Elements -->
+    <div class="background-gradient"></div>
+
+    <script src="script.js"></script>
+    <script src="bg3d.js"></script>
+</body>
+
+</html>
